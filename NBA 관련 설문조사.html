@@ -71,15 +71,13 @@
                 <p>기술의 멋, 난이도 등을 고려하여 점수를 매겨주세요. 싫어하는 기술은 제외시킬 수 있습니다.</p>
                 <input type="checkbox" id="measure_dunk" name="tech_score" value="measure_dunk">
                 <label for="measure_dunk">덩크</label>
-                <label for="score_dunk"></label>
-                <input type="number" id="score_dunk" name="1" max="100" value="1">
-                <span>점 (최대 100점)</span>
+                <input type="number" id="score_dunk" min="1" max="100" value="1">
+                <label for="score_dunk">점 (최대 100점)</label>
                 <br>
                 <input type="checkbox" id="measure_shoot" name="tech_score" value="measure_shoot">
                 <label for="measure_shoot">슈팅</label>
-                <label for="score_shoot"></label>
                 <input type="number" id="score_shoot" min="1" max="100" value="1">
-                <span>점 (최대 100점)</span>
+                <label for="score_shoot">점 (최대 100점)</label>
                 <br>
                 <input type="checkbox" id="measure_pass" name="tech_score" value="measure_pass">
                 <label for="measure_pass">패스</label>
@@ -89,26 +87,24 @@
                 <br>
                 <input type="checkbox" id="measure_steal" name="tech_score" value="measure_steal">
                 <label for="measure_steal">스틸</label>
-                <label for="score_steal"></label>
                 <input type="range" id="score_steal" min="1" max="100" step="5">
-                <span>점 (최대 100점)(10점 단위로 선택 가능)</span>
+                <label for="score_steal">점 (최대 100점)(10점 단위로 선택 가능)</label>
                 <br>
                 <input type="checkbox" id="measure_block" name="tech_score" value="measure_block">
                 <label for="measure_block">블락</label>
-                <label for="score_block"></label>
                 <input type="number" id="score_block" min="1" max="100" value="1">
-                <span>점 (최대 100점)</span>
+                <label for="score_block">점 (최대 100점)</label>
                 <br>
                 <input type="checkbox" id="measure_fadeaway" name="tech_score" value="measure_fadeaway">
                 <label for="measure_fadeaway">페이드 어웨이</label>
-                <label for="score_fadeaway"></label>
                 <input type="range" id="score_fadeaway" min="1" max="100" step="5">
-                <span>점 (최대 100점)(5점 단위로 선택 가능)</span>
+                <label for="score_fadeaway">점 (최대 100점)(5점 단위로 선택 가능)</label>
                 <br> <!--페이드 어웨이는 스틸보다 섬세한 기술이기 때문에 더 섬세한 점수 매기기가 가능하게 합니다-->
                 <input type="checkbox" id="measure_drivein" name="tech_score" value="measure_drivein">
                 <label for="measure_drivein">돌파</label>
-                <label for="score_drivein"></label>
-                <input type="range" id="score_drivein" min="1" max="100" step="20">점 (최대 100점)(20점 단위로 선택 가능)<br> <!--돌파는 어떻게 하느냐에 따라 멋이 많이 달라지기 때문에 20점 단위로 선택하게 합니다-->
+                <input type="range" id="score_drivein" min="1" max="100" step="20">
+                <label for="score_drivein">점 (최대 100점)(20점 단위로 선택 가능)</label>
+                <br> <!--돌파는 어떻게 하느냐에 따라 멋이 많이 달라지기 때문에 20점 단위로 선택하게 합니다-->
             </section>
             <section id="end">
                 <input type="submit" value="제출"> <!--현재까지 입력한 정보를 제출합니다-->
