@@ -9,15 +9,27 @@ th, td{
 header {
     background-color: aqua;
     border : solid 1px black;
+    font-family: "Noto Sans KR", sans-serif;
+    text-align: center;
 }
 
 nav {
     background-color: aqua;
     border : solid 1px black;
+    font-size : 20px;
+    font-weight : 600;
+    text-align: center;
 }
 
-nav:hover::before {
-    content : "=>";
+nav a {
+    text-decoration: none;
+}
+nav a:hover::before {
+    content : "👉";
+}
+
+nav a:hover{
+    font-style: italic;
 }
 
 #definition{
@@ -51,3 +63,4 @@ input:focus{
 li:nth-child(1){
     background-color: red;
 }
+
