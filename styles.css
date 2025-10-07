@@ -5,3 +5,49 @@ table{
 th, td{
     border: 1px solid #ccc;
 }
+
+header {
+    background-color: aqua;
+    border : solid 1px black;
+}
+
+nav {
+    background-color: aqua;
+    border : solid 1px black;
+}
+
+nav:hover::before {
+    content : "=>";
+}
+
+#definition{
+    background-color: aqua;
+}
+
+.player_intro{
+    background-color : aqua;
+}
+
+a[href]{
+    color : red;
+}
+
+li p{
+    font-weight: 900;
+}
+
+h2 + ol{
+    background-color: aquamarine;
+}
+
+a:visited{
+    color : gold;
+}
+
+input:focus{
+    background : aqua;
+}
+
+li:nth-child(1){
+    background-color: red;
+}
