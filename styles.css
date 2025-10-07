@@ -13,6 +13,10 @@ header {
     text-align: center;
 }
 
+#logo{
+    width : 70px;
+}
+
 nav {
     background-color: aqua;
     border : solid 1px black;
@@ -22,8 +26,13 @@ nav {
 }
 
 nav a {
+    background-color: #CCC;
+    padding : 10px;
+    border : solid 1px #CCC;
     text-decoration: none;
+    display: inline-block;
 }
+
 nav a:hover::before {
     content : "👉";
 }
@@ -46,6 +55,7 @@ a[href]{
 
 li p{
     font-weight: 900;
+    margin : 10px;
 }
 
 h2 + ol{
@@ -63,4 +73,3 @@ input:focus{
 li:nth-child(1){
     background-color: red;
 }
-
