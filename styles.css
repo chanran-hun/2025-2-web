@@ -19,7 +19,13 @@ header {
     transition-delay: 1s;
 }
 
-header {
+header::after{
+    display: block;
+    content:"";
+    clear:both;
+}
+
+header:hover {
     background-color: greenyellow;
 }
 
