@@ -1,16 +1,24 @@
-table{
+table {
+    width: 90%;
+    margin: 20px auto;
     border-collapse: collapse;
-    position: relative;
-    left : 200px;
     text-align: center;
+    border: 1px solid #ddd;
 }
 
-th, td{
-    border: 1px solid #ccc;
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #004aad;
+    color: white;
 }
 
 header {
-    background-color: aqua;
+    background-color: #004aad;
+    color : white;
     border : solid 1px black;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
@@ -26,7 +34,7 @@ header::after{
 }
 
 header:hover {
-    background-color: greenyellow;
+    background-color: rgb(182, 0, 0);
 }
 
 #logo{
@@ -36,7 +44,8 @@ header:hover {
 }
 
 nav {
-    background-color: aqua;
+    background-color: #004aad;
+    color : white;
     border : solid 1px black;
     font-size : 20px;
     font-weight : 600;
@@ -65,12 +74,33 @@ nav a:hover{
     background-color: aqua;
 }
 
-.player_intro{
-    background-color : aqua;
+main section {
+    margin: 40px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px;
+}
+
+.player_intro {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 15px;
+}
+
+.player_intro img {
+    border: solid 1px black;
+    border-radius: 8px;
 }
 
 a[href]{
-    color : red;
+    color : rgb(182, 0, 0);
 }
 
 li p{
