@@ -20,7 +20,7 @@
         </nav>
         <main>
             <form action="#">
-                <fieldset>
+                <fieldset class="survey">
                     <legend>기본 정보</legend> <!--로그인에 필요한 기본 정보를 기입하는 곳입니다-->
                         <label for="userid">아이디(4글자 이상):</label>
                             <input type="text" id="userid" minlength="4" size="10" required>
@@ -28,7 +28,7 @@
                         <label for="userpw">비밀번호(5글자 이상):</label>
                             <input type="password" id="userpw" minlength="5" size="10" required>
                 </fieldset>
-                <fieldset>
+                <fieldset class="survey">
                     <legend>추가 정보</legend> <!--아이디/비밀번호 이외의 추가 정보를 받는 곳입니다-->
                     <label for="tel">전화번호</label>
                     <input type="tel" id="tel">
@@ -39,7 +39,7 @@
                     <label for="age">나이</label>
                     <input type="number" id="age">
                 </fieldset>
-                <section id="vote">
+                <section id="vote" class="survey">
                     <p>한번이라도 들어본 선수를 고르세요</p> <!--유명한 선수 중 알고있는 선수들을 고르도록 합니다-->
                     <input type="checkbox" id="magic" name="player" value="magic">
                     <label for="magic">매직 존슨</label>
