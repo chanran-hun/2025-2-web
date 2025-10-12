@@ -121,8 +121,10 @@ li:nth-child(1){
 }
 
 .survey{
-    border-radius:15px;
-    padding:18px 20px;
+    width: 80%;    
+    margin: 24px auto;    
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .survey legend{
