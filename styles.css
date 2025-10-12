@@ -20,6 +20,7 @@ header {
     background-color: #004aad;
     color : white;
     border : solid 1px black;
+    border-radius: 10px;
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
     transition-property: background-color;
@@ -52,12 +53,14 @@ nav {
     text-align: center;
     display: flex;
     justify-content: space-evenly;
+    border-radius: 10px;
 }
 
 nav a {
     background-color: #CCC;
     padding : 10px;
     border : solid 1px #CCC;
+    border-radius: 10px;
     text-decoration: none;
     display: inline-block;
 }
