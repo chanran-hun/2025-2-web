@@ -12,15 +12,19 @@ th, td {
 }
 
 th {
-    background-color: #004aad;
-    color: white;
+    background-color: #1d428a;
+    color: #FFF;
+}
+
+tr:nth-child(even) {
+    background-color: #f5f7fa;
 }
 
 header {
-    background-color: #004aad;
+    background-color: #1d428a;
     color : white;
-    border : solid 1px black;
-    border-radius: 10px;
+    /* border : solid 1px black; */
+    /* border-radius: 10px; */
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
     transition-property: background-color;
@@ -45,15 +49,13 @@ header:hover {
 }
 
 nav {
-    background-color: #004aad;
+    background-color: #1d428a;
     color : white;
-    border : solid 1px black;
     font-size : 20px;
     font-weight : 600;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
-    border-radius: 10px;
 }
 
 nav a {
@@ -73,15 +75,11 @@ nav a:hover{
     font-style: italic;
 }
 
-#definition{
-    background-color: aqua;
-}
-
 main section {
     margin: 40px auto;
     padding: 20px;
     width: 80%;
-    background-color: white;
+    background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0 2px 6px;
 }
@@ -90,11 +88,12 @@ main section {
     display: flex;
     align-items: center;
     gap: 20px;
-    background-color: #fff;
+    background-color: #004aad;
     border: 1px solid var(--border);
     border-radius: 10px;
     margin: 10px 0;
-    padding: 15px;
+    padding: 15px;    
+    color : white;
 }
 
 .player_intro img {
@@ -103,7 +102,15 @@ main section {
 }
 
 a[href]{
-    color : rgb(182, 0, 0);
+    color : #c8102e;
+}
+
+a:visited{
+    color : gold;
+}
+
+a:hover {
+    color: #1d428a;
 }
 
 li p{
@@ -112,17 +119,19 @@ li p{
 }
 
 h2 + ol{
-    background-color: aquamarine;
-}
-
-a:visited{
-    color : gold;
+    background-color: #1d428a;
+    border-radius: 10px;
 }
 
 li:nth-child(1){
-    background-color: red;
+    background-color: #c8102e;
 }
 
+#amazing ul{
+    border-radius: 10px;
+    background-color: #004aad;
+    color: white;
+}
 .survey{
     width: 80%;    
     margin: 24px auto;    
@@ -132,7 +141,7 @@ li:nth-child(1){
 
 .survey legend{
     font-weight:700;
-    color:#004aad;
+    color:#1d428a;
     padding:0 6px;
 }
 
@@ -149,5 +158,5 @@ input{
 
 input:focus{
     border-color:#004aad;
-    box-shadow:0 0 0 3px rgb(0, 75, 173);
+    box-shadow: 0 0 0 3px rgba(200,16,46,0.3);
 }
