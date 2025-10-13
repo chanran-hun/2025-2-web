@@ -84,6 +84,12 @@ main section {
     box-shadow: 0 2px 6px;
 }
 
+#player_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
 .player_intro {
     display: flex;
     align-items: center;
@@ -91,7 +97,7 @@ main section {
     background-color: #004aad;
     border: 1px solid var(--border);
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 10px 10px;
     padding: 15px;    
     color : white;
 }
@@ -132,6 +138,7 @@ li:nth-child(1){
     background-color: #004aad;
     color: white;
 }
+
 .survey{
     width: 80%;    
     margin: 24px auto;    
@@ -158,5 +165,5 @@ input{
 
 input:focus{
     border-color:#004aad;
-    box-shadow: 0 0 0 3px rgba(200,16,46,0.3);
+    box-shadow: 0 0 0 3px #c8102e;
 }
