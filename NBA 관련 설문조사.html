@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NBA 관련 설문조사</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <!--이정훈/60222124/기초웹 과제#2-->
 </head>
 <body>
@@ -41,22 +44,48 @@
                 </fieldset>
                 <section id="vote" class="survey">
                     <p>한번이라도 들어본 선수를 고르세요</p> <!--유명한 선수 중 알고있는 선수들을 고르도록 합니다-->
-                    <input type="checkbox" id="magic" name="player" value="magic">
-                    <label for="magic">매직 존슨</label>
-                    <input type="checkbox" id="bird" name="player" value="bird">
-                    <label for="bird">래리 버드</label>
-                    <input type="checkbox" id="MJ" name="player" value="MJ">
-                    <label for="MJ">마이클 조던</label>
-                    <input type="checkbox" id="bron" name="player" value="bron">
-                    <label for="bron">르브론 제임스</label>
-                    <input type="checkbox" id="curry" name="player" value="curry">
-                    <label for="curry">스테픈 커리</label>
-                    <input type="checkbox" id="SGA" name="player" value="SGA">
-                    <label for="SGA">샤이 길저스-알렉산더</label>
-                    <input type="checkbox" id="RUSS" name="player" value="RUSS">
-                    <label for="RUSS">러셀 웨스트브룩</label>
-                    <input type="checkbox" id="ha" name="player" value="ha">
-                    <label for="ha">하승진</label>
+                    <div class="options">
+                        <div class="choice">
+                            <input type="checkbox" id="magic" name="player" value="magic">
+                            <label for="magic">매직 존슨</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" id="bird" name="player" value="bird">
+                            <label for="bird">래리 버드</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" id="kobe" name="player" value="kobe">
+                            <label for="kobe">코비 브라이언트</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" id="MJ" name="player" value="MJ">
+                            <label for="MJ">마이클 조던</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" id="bron" name="player" value="bron">
+                            <label for="bron">르브론 제임스</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" id="curry" name="player" value="curry">
+                            <label for="curry">스테픈 커리</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" id="SGA" name="player" value="SGA">
+                            <label for="SGA">샤이 길저스-알렉산더</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" id="RUSS" name="player" value="RUSS">
+                            <label for="RUSS">러셀 웨스트브룩</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" id="ha" name="player" value="ha">
+                            <label for="ha">하승진</label>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
                     <p>좋아하는 농구 기술을 고르세요</p> <!--다양한 농구 기술 중 가장 좋아하는 기술을 고르도록 합니다-->
                     <input type="radio" id="vote-dunk" name="tech" value="dunk" checked>
                     <label for="vote-dunk">덩크</label>

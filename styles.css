@@ -23,8 +23,6 @@ tr:nth-child(even) {
 header {
     background-color: #1d428a;
     color : white;
-    /* border : solid 1px black; */
-    /* border-radius: 10px; */
     font-family: "Noto Sans KR", sans-serif;
     text-align: center;
     transition-property: background-color;
@@ -157,6 +155,10 @@ li:nth-child(1){
     color:#666;
 }
 
+.options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
 input{
     max-width:360px;
     border:1px solid #999999;
