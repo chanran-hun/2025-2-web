@@ -23,7 +23,7 @@ tr:nth-child(even) {
 header {
     background-color: #1d428a;
     color : white;
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "JUA", sans-serif;
     text-align: center;
     transition-property: background-color;
     transition-duration: 2s;
