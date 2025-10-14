@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA 소개 페이지</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Jua&display=swap" rel="stylesheet">
+    <!--이정훈/60222124/기초웹 과제#2-->
+</head>
+<body>
+    <header>
+        <h1>세계 최고 수준의 농구 리그, NBA</h1>
+        <img id = "logo" src = "nbalogo.png" >  <!--NBA의 로고를 보여줍니다-->
+        <p>
+            <em>세계 최고 수준의 농구 리그이자</em> <br> <!--NBA 개요 상세-->
+            전미 농구 협회(<strong>N</strong>ational <strong>B</strong>asketball <strong>A</strong>ssociation)의 줄임말인 NBA는
+            1946년에 창립되어 현재 미국과 캐나다를 포함한 30개의 팀으로 구성되어 있습니다. 
+            시즌은 보통 10월에 개막해 6월에 챔피언을 가리는 형식으로 진행됩니다.<br><br>
+
+            NBA는 단순한 스포츠 리그를 넘어, 전 세계 농구 문화의 중심이자 
+            스포츠 비즈니스의 상징으로 자리 잡았습니다. 
+            마이클 조던, 르브론 제임스, 코비 브라이언트 등 수많은 슈퍼스타들이 등장하며 
+            세대마다 새로운 전설을 써 내려가고 있습니다.<br><br>
+
+            또한 NBA는 다양한 국적의 선수들이 함께 경쟁하는 무대로,
+            전 세계 팬들이 하나로 모이는 글로벌 리그이기도 합니다. 
+            화려한 경기력과 치열한 경쟁, 그리고 팬과의 소통 문화는 
+            다른 리그에서는 찾아보기 힘든 NBA만의 독특한 매력입니다.
+        </p>
+    </header>
+    <nav><!--여러가지 주요 기능들로 바로 이동할 수 있게 하는 장치입니다-->
+        <a href="홈 페이지.html">홈 페이지</a>
+        <a href="폼 구성 페이지.html">폼 구성 페이지</a><!--NBA 관련 설문조사 페이지로 연결됩니다.-->
+        <a href="#">공지사항</a>
+        <a href="#">사이트맵</a>
+        <a href="#">커뮤니티</a>
+    </nav>
+    <main>
+        <section id = "definition"> <!--NBA에 대한 간략한 설명입니다-->
+            <h2>개요</h2>
+            NBA는 <strong>미국</strong>과 <strong>캐나다</strong>의 30개의 팀으로 이루어져 있는 미국 프로 농구 협회입니다. 또한, 유로 리그와도 <em>상당히 차이가 나는</em> 압도적인 전 세계 최고의 프로 농구 리그입니다.
+            
+        </section>
+        <section id = "superstars"> <!--NBA의 대표적이거나 유명한 선수들을 간략하게 소개합니다-->
+            <h2>주요 선수</h2>
+            <ol id="player_container">
+                <li class="player_intro">
+                    <p>매직 존슨</p>
+                    <img src = "magic.jpg"  width="100px">
+                    <p>역대 최고의 포인트가드로, 래리 버드와의 라이벌 관계를 통해 1980년대 NBA 흥행을 이끌었습니다.</p>
+                </li>
+                <li class="player_intro">
+                    <p>래리 버드</p>
+                    <img src = "bird.jpg" width="100px">
+                    <p>보스턴 셀틱스를 대표하는 슈퍼스타로, 매직 존슨과 함께 NBA의 황금기를 만든 인물 입니다.</p>
+                </li>
+                <li class="player_intro">
+                    <p>마이클 조던</p>
+                    <img src="MJ.jpg" width="100px">
+                    <p>6번의 우승과 6번의 파이널 MVP를 차지하며, NBA 역사상 최고의 선수로 평가받습니다.</p>
+                </li>
+                <li class="player_intro">
+                    <p>르브론 제임스</p>
+                    <img src="Bron.jpg" width="100px">
+                    <p>현재도 활약 중인 선수로, 우승과 누적 기록 모두에서 레전드급 성과를 이어가고 있습니다.</p>
+                </li>
+                <li class="player_intro">
+                    <p>하승진</p>
+                    <img src="ha.jpeg" width="100px">
+                    <p>한국인중 유일하게 NBA무대에 있어본 선수입니다.</p>
+                </li>
+            </ol>
+        </section>
+        <section id = "compare">
+            <h2>선수 기록 비교</h2> <!--소개했던 선수들의 통산 기록을 비교합니다-->
+            <table>
+                <caption>통산 기록/신체 정보</caption>
+                <thead>
+                    <tr>
+                        <th>선수이름</th>
+                        <th>우승횟수</th>
+                        <th>파이널MVP</th>
+                        <th>시즌MVP</th>
+                        <th>통산 득점</th>
+                        <th>키</th>
+                        <th>몸무게</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>매직 존슨</th>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>17707</td>
+                        <td>206cm</td>
+                        <td>97kg</td>
+                    </tr>
+                    <tr>
+                        <th>래리 버드</th>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>21791</td>
+                        <td>206cm</td>
+                        <td>99kg</td>
+                    </tr>
+                    <tr>
+                        <th>마이클 조던</th>
+                        <td>6</td>
+                        <td>6</td>
+                        <td>5</td>
+                        <td>32292</td>
+                        <td>198cm</td>
+                        <td>89kg</td>
+                    </tr>
+                    <tr>
+                        <th>르브론 제임스</th>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>42184</td>
+                        <td>206cm</td>
+                        <td>113kg</td>
+                    </tr>
+                    <tr>
+                        <th>하승진</th>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>70</td>
+                        <td>221cm</td>
+                        <td>138kg</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>비고</th>
+                        <td colspan="6">기록은 NBA 2024-25시즌 까지의 기록</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <section id="amazing">
+            <h2>NBA의 엄청난 기록들</h2> <!--NBA의 놀라운 기록들을 설명합니다-->
+            <ul>
+                <li>
+                    <strong>윌트 체임벌린 - 단일 경기 100 득점</strong>
+                    <p>보통은 한 경기에 팀 내에서 가장 많은 득점을 하는 선수가 <em>30점대정도</em> 됩니다.</p>
+                </li>
+                <li>
+                    <strong>르브론 제임스 - 통산42184 득점</strong>
+                    <p>아직 은퇴하지 않은 선수가 통산 득점 1위인 42184점을 기록중이고 기존 1위였던 기록은 <em>38387점으로,</em> 큰 차이로 1위를 기록중입니다.</p>
+                </li>
+                <li>
+                    <strong>러셀 웨스트브룩 - 한시즌 트리플더블 42회</strong>
+                    <p><em>트리플더블이란 득점/어시스트/리바운드/스틸/블락 중 3분야를 2자리를 기록하는것을 말합니다.</em> NBA에서 한 시즌에 82경기를 하는데 그중 42경기에서 트리플더블을 기록한 유일한 선수입니다.</p>
+                </li>
+                <li>
+                    <strong>클레이 톰슨 - 한 경기 3점슛 메이드 14개</strong>
+                    <p>보통은 한 경기에 3점슛을 많이 넣는 선수가 <em>7개정도 기록을 합니다.</em></p>
+                </li>
+                <li>
+                    <strong>존 스탁턴 - 통산 어시스트 15806개/통산 스틸 3265개로 모두 1위</strong>
+                    <p>한 분야에서 정상을 달성하기도 힘든데 두 분야에서 오랫동안 정상 자리를 지키고 있는 선수. 어시스트 2위기록은 <em>12499개</em>, 스틸 2위 기록은 <em>2717개</em>로 당분간 깨지기 정말 힘들것으로 예상됩니다.</p>
+                </li>
+                <li><strong>빌 러셀 - 통산 우승 11회</strong>
+                    <p><em>농구의 황제 마이클 조던이 6회의 우승을 기록했는데,</em> 11회의 우승을 기록하였다는것은 당시 보스턴이 얼마나 압도적이었던 팀인지를 보여줍니다.</p>
+                </li>
+            </ul>
+        </section>
+        <a href="https://www.basketball-reference.com/" target="_blank">NBA의 다양한 기록을 조회할 수 있는 사이트</a> <!--NBA관련 다양한 정보들을 볼 수 있는 외부 사이트를 공유합니다-->
+    </main>
+    <footer>
+        <p>이정훈/60222124/기초웹 과제#2</p>
+    </footer>
+</body>
+</html>
