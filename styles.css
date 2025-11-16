@@ -1,4 +1,6 @@
-table {
+/* 기본 테이블 및 텍스트 스타일 설정
+- 표(table) 전체 레이아웃, 테두리, 정렬*/
+table { 
     width: 90%;
     margin: 20px auto;
     border-collapse: collapse;
@@ -6,20 +8,22 @@ table {
     border: 1px solid #ddd;
 }
 
-th, td {
+th, td { 
     border: 1px solid #ddd;
     padding: 8px;
 }
-
-th {
+/* 표의 제목 행(th) 스타일 - NBA 블루 색상 사용 */
+th { 
     background-color: #1d428a;
     color: #FFF;
 }
-
-tr:nth-child(even) {
+/* 짝수 행 배경색 변경으로 가독성 향상 */
+tr:nth-child(even) { 
     background-color: #f5f7fa;
 }
-
+/* 헤더 영역
+- 페이지 상단 배경 및 글꼴 스타일
+- 마우스 오버 시 색상 변화 (transition)*/
 header {
     background-color: #1d428a;
     color : white;
@@ -29,23 +33,25 @@ header {
     transition-duration: 2s;
     transition-delay: 1s;
 }
-
+/* float 해제용 가상요소 */
 header::after{
     display: block;
     content:"";
     clear:both;
 }
-
+/* 헤더에 마우스 올렸을 때 색상 전환 */
 header:hover {
     background-color: rgb(182, 0, 0);
 }
-
+/* 로고 이미지 (오른쪽 정렬)*/
 #logo{
     width : 70px;
     float : right;
     margin: 10px 20px 10px 30px;
 }
-
+/* 내비게이션 바(nav)
+- Flexbox로 버튼을 가로로 정렬
+- 반응형 변환을 고려한 구조 */
 nav {
     background-color: #1d428a;
     color : white;
@@ -55,7 +61,7 @@ nav {
     display: flex;
     justify-content: space-evenly;
 }
-
+/* 네비게이션 버튼 스타일 */
 nav a {
     background-color: #CCC;
     padding : 10px;
@@ -64,15 +70,16 @@ nav a {
     text-decoration: none;
     display: inline-block;
 }
-
+/* 버튼 hover 시 아이콘 추가 효과 */
 nav a:hover::before {
     content : "👉";
 }
-
+/* 버튼 hover 시 글꼴 기울이기 */
 nav a:hover{
     font-style: italic;
 }
-
+/* 메인 섹션 (main > section)
+- 내용 박스 디자인 및 그림자 효과*/
 main section {
     margin: 40px auto;
     padding: 20px;
@@ -81,30 +88,47 @@ main section {
     border-radius: 10px;
     box-shadow: 0 2px 6px;
 }
-
+/* 선수 소개 영역 (그리드 레이아웃) */
 #player_container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
-
+/* 선수 카드 스타일 */
 .player_intro {
     display: flex;
     align-items: center;
     gap: 20px;
     background-color: #004aad;
-    border: 1px solid var(--border);
     border-radius: 10px;
     margin: 10px 10px;
     padding: 15px;    
     color : white;
 }
-
+/* 선수 이미지 테두리 반짝임 애니메이션 */
 .player_intro img {
-    border: solid 1px black;
-    border-radius: 8px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    position: relative;
+    z-index: 0;
+    animation: border-glow 3s linear infinite;
 }
-
+/* 테두리 빛나는 효과 (keyframes) */
+@keyframes border-glow {
+    0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2),
+                0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6),
+                0 0 25px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2),
+                    0 0 10px rgba(255, 255, 255, 0.3);
+    } 
+}
+/* 링크 스타일 (a 태그)*/
 a[href]{
     color : #c8102e;
 }
@@ -136,40 +160,72 @@ li:nth-child(1){
     background-color: #004aad;
     color: white;
 }
-
+/* 설문조사 폼 스타일
+- fieldset(survey) 공통 디자인*/
 .survey{
     width: 80%;    
     margin: 24px auto;    
     padding: 20px;
     border-radius: 10px;
 }
-
+/* fieldset 제목 스타일 */
 .survey legend{
     font-weight:700;
     color:#1d428a;
     padding:0 6px;
 }
-
+/* label 텍스트 색상 */
 .survey label{
     font-size:14px;
     color:#666;
 }
-
+/* 선택지 영역 2열 그리드 */
 .options{
     display:grid;
     grid-template-columns:1fr 1fr;
 }
+/* input 공통 스타일 */
 input{
     max-width:360px;
     border:1px solid #999999;
     border-radius: 10px;
 }
-
+/* input 포커스 시 테두리 강조 */
 input:focus{
-    border-color:#004aad;
-    box-shadow: 0 0 0 3px #c8102e;
+    box-shadow: 0 0 0 3px #004aad;
 }
 
+@media (max-width: 900px) {
+    nav a {
+        background-color: #CCC;
+        padding : 0px;
+        border : solid 1px #CCC;
+        border-radius: 0px;
+        text-decoration: none;
+    }
+    #player_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+/* 반응형 스타일 */
+@media (max-width: 600px) {
+    nav a {
+    background: none;
+    border: none;
+    padding: 0px 0;
+    text-decoration: underline;
+    }
+    nav a:hover{
+        color: white;
+    }
+    #player_container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
 /* 기본 테마 */
 body {
     background-color: #ffffff;
