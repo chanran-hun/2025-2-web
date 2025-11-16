@@ -169,3 +169,42 @@ input:focus{
     border-color:#004aad;
     box-shadow: 0 0 0 3px #c8102e;
 }
+
+/* 기본 테마 */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* 다크 테마 */
+body.dark-theme {
+    background-color: #121212;
+    color: #e4e4e4;
+}
+
+body.dark-theme header {
+    background-color: #333333;
+    color: white;
+}
+
+body.dark-theme nav {
+    background-color: #333333;
+}
+
+body.dark-theme main section {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 6px rgba(255,255,255,0.2);
+}
+
+body.dark-theme .player_intro {
+    background-color: #222;
+}
+
+body.dark-theme table th {
+    background-color: #333;
+}
+
+body.dark-theme table tr:nth-child(even) {
+    background-color: #1e1e1e;
+}
