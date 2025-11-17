@@ -264,3 +264,9 @@ body.dark-theme table th {
 body.dark-theme table tr:nth-child(even) {
     background-color: #1e1e1e;
 }
+
+/*검색 스타일*/
+#player-search {
+    margin: 10px 0 20px;
+    padding: 8px 12px;
+}
