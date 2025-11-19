@@ -287,3 +287,27 @@ body.dark-theme table tr:nth-child(even) {
 body.dark-theme .player_intro.hovered {
     background-color: #333;
 }
+
+/* 접을 수 있는 섹션 기본 스타일 */
+section.collapsible h2 {
+    cursor: pointer;              /* 마우스를 올리면 클릭 가능해 보이도록 */
+    position: relative;
+}
+
+/* 헤더 오른쪽에 화살표 표시 */
+section.collapsible h2::after {
+    content: "▼";                 /* 펼쳐진 상태 */
+    position: absolute;
+    right: 10px;
+    font-size: 0.8em;
+}
+
+/* 섹션이 접힌 상태일 때 화살표 모양 변경 */
+section.collapsible.collapsed h2::after {
+    content: "▶";                 /* 접힌 상태 */
+}
+
+/* 접힌 상태일 때, h2를 제외한 나머지 내용 숨기기 */
+section.collapsible.collapsed > *:not(h2) {
+    display: none;
+}

@@ -96,4 +96,16 @@ document.addEventListener("DOMContentLoaded", () => {
             item.classList.remove("hovered");
         });
     });
+
+    // 5) 접을 수 있는 섹션 기능
+    const collapsibleSections = document.querySelectorAll("main section.collapsible");
+
+    collapsibleSections.forEach((section) => {
+        const header = section.querySelector("h2");
+        if (!header) return;  // h2가 없으면 스킵
+
+        header.addEventListener("click", () => {
+            section.classList.toggle("collapsed");
+        });
+    });
 });
