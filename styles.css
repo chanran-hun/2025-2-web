@@ -270,3 +270,20 @@ body.dark-theme table tr:nth-child(even) {
     margin: 10px 0 20px;
     padding: 8px 12px;
 }
+
+/* 선수 카드 호버 효과 */
+.player_intro {
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 기본 테마에서 호버 시 스타일 */
+.player_intro.hovered {
+    background-color: #0066d6;   /* 기존 #004aad 보다 조금 더 밝게 */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* 다크 모드에서 호버 시 스타일 */
+body.dark-theme .player_intro.hovered {
+    background-color: #333;
+}

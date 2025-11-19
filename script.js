@@ -80,4 +80,20 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // 4) 홈 페이지용: 선수 카드 호버 효과
+    const playerItems = document.querySelectorAll("#player_container .player_intro");
+
+    // playerItems가 없으면(설문 페이지 등) 그냥 아무 것도 안 하고 넘어감
+    playerItems.forEach((item) => {
+        // 마우스를 올렸을 때(mouseover)
+        item.addEventListener("mouseover", () => {
+            item.classList.add("hovered");
+        });
+
+        // 마우스를 뺐을 때(mouseout)
+        item.addEventListener("mouseout", () => {
+            item.classList.remove("hovered");
+        });
+    });
 });
