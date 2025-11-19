@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // 0) 응답 인사말: 현재 시간에 따라 인사말 표시
+    const greetingEl = document.getElementById("greeting");
+    if (greetingEl) {
+        const now = new Date();
+        const hour = now.getHours();   // 0 ~ 23
+
+        let message = "";
+
+        if (hour < 12) {
+            message = "좋은 아침입니다! NBA 페이지에 오신 걸 환영합니다.";
+        } else if (hour < 18) {
+            message = "좋은 오후입니다! NBA와 함께 즐거운 시간 보내세요.";
+        } else {
+            message = "좋은 저녁입니다! 오늘도 NBA 이야기 함께해요.";
+        }
+
+        greetingEl.textContent = message;
+    }
+
      // 1) 테마 토글
     const themeBtn = document.getElementById("theme-toggle");
     if (themeBtn) {

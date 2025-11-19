@@ -311,3 +311,9 @@ section.collapsible.collapsed h2::after {
 section.collapsible.collapsed > *:not(h2) {
     display: none;
 }
+/* 시간대에 따른 인사말 표시 */
+.greeting {
+    margin-top: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+}
