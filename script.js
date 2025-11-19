@@ -108,4 +108,36 @@ document.addEventListener("DOMContentLoaded", () => {
             section.classList.toggle("collapsed");
         });
     });
+    // ====== 6) 슬라이드쇼 기능 ======
+    const images = [
+        { src: "magic.jpg", caption: "매직 존슨" },
+        { src: "bird.jpg", caption: "래리 버드" },
+        { src: "MJ.jpg", caption: "마이클 조던" },
+        { src: "Bron.jpg", caption: "르브론 제임스" },
+        { src: "ha.jpeg", caption: "하승진" }
+    ];
+
+    let index = 0;
+
+    const slideImg = document.getElementById("slide-img");
+    const slideCaption = document.getElementById("slide-caption");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    function updateSlide() {
+        slideImg.src = images[index].src;
+        slideCaption.textContent = images[index].caption;
+    }
+
+    if (slideImg && slideCaption && prevBtn && nextBtn) {
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + images.length) % images.length;
+            updateSlide();
+        });
+
+        nextBtn.addEventListener("click", () => {
+            index = (index + 1) % images.length;
+            updateSlide();
+        });
+    }
 });
