@@ -317,3 +317,17 @@ section.collapsible.collapsed > *:not(h2) {
     font-weight: 600;
     font-size: 1rem;
 }
+
+/* 폼 입력 피드백 메시지 */
+.field-msg {
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+.field-msg.error {
+    color: #c8102e;   /* 빨간색 계열 – 오류 */
+}
+
+.field-msg.ok {
+    color: #1d428a;   /* 파란색 계열 – 정상 */
+}

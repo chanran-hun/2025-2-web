@@ -28,11 +28,17 @@
             <form action="#">
                 <fieldset class="survey">
                     <legend>기본 정보</legend> <!--로그인에 필요한 기본 정보를 기입하는 곳입니다-->
-                        <label for="userid">아이디(4글자 이상):</label>
-                            <input type="text" id="userid" minlength="4" size="10" required>
-                            <br>
-                        <label for="userpw">비밀번호(5글자 이상):</label>
-                            <input type="password" id="userpw" minlength="5" size="10" required>
+                    <label for="userid">아이디(4글자 이상):</label>
+                    <input type="text" id="userid" minlength="4" size="10" required>
+                    <br>
+                    <!-- ✅ 실시간 피드백 -->
+                    <span id="userid-msg" class="field-msg"></span>
+                    <br>
+                    <label for="userpw">비밀번호(5글자 이상):</label>
+                    <input type="password" id="userpw" minlength="5" size="10" required>
+                    <!-- ✅ 실시간 피드백 -->
+                    <span id="userpw-msg" class="field-msg"></span>
+                    <br>            
                 </fieldset>
                 <fieldset class="survey">
                     <legend>추가 정보</legend> <!--아이디/비밀번호 이외의 추가 정보를 받는 곳입니다-->

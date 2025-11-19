@@ -34,6 +34,73 @@ document.addEventListener("DOMContentLoaded", () => {
     const responseList = document.getElementById("response-list");
 
     if (surveyForm && responseList) {
+        // ====== 입력 과정 상호작용 1: 아이디 길이 실시간 체크 ======
+        const userIdInput = document.getElementById("userid");
+        const userIdMsg = document.getElementById("userid-msg");
+
+        if (userIdInput && userIdMsg) {
+            userIdInput.addEventListener("input", () => {
+                const len = userIdInput.value.trim().length;
+
+                userIdMsg.classList.remove("ok", "error");
+
+                if (len === 0) {
+                    userIdMsg.textContent = "아이디를 입력해주세요.";
+                    userIdMsg.classList.add("error");
+                } else if (len < 4) {
+                    userIdMsg.textContent = `현재 ${len}글자 (4글자 이상 필요)`;
+                    userIdMsg.classList.add("error");
+                } else {
+                    userIdMsg.textContent = "사용 가능한 길이입니다.";
+                    userIdMsg.classList.add("ok");
+                }
+            });
+        }
+
+        // ====== 입력 과정 상호작용 2: 비밀번호 길이 실시간 체크 ======
+        const userPwInput = document.getElementById("userpw");
+        const userPwMsg = document.getElementById("userpw-msg");
+
+        if (userPwInput && userPwMsg) {
+            userPwInput.addEventListener("input", () => {
+                const len = userPwInput.value.trim().length;
+
+                userPwMsg.classList.remove("ok", "error");
+
+                if (len === 0) {
+                    userPwMsg.textContent = "비밀번호를 입력해주세요.";
+                    userPwMsg.classList.add("error");
+                } else if (len < 5) {
+                    userPwMsg.textContent = `현재 ${len}글자 (5글자 이상 필요)`;
+                    userPwMsg.classList.add("error");
+                } else {
+                    userPwMsg.textContent = "안전한 길이입니다.";
+                    userPwMsg.classList.add("ok");
+                }
+            });
+        }
+        // ====== 입력 과정 상호작용 4: 슬라이더 값 실시간 표시 ======
+        function attachScoreDisplay(rangeId) {
+            const input = document.getElementById(rangeId);
+            if (!input) return;
+
+            // range 바로 다음 요소(label 또는 span)에 현재 점수 표시
+            const display = input.nextElementSibling;
+            if (!display) return;
+
+            const update = () => {
+                display.textContent = `현재 점수: ${input.value}점`;
+            };
+
+            update(); // 초기값 표시
+            input.addEventListener("input", update);
+        }
+
+        attachScoreDisplay("score_pass");
+        attachScoreDisplay("score_steal");
+        attachScoreDisplay("score_fadeaway");
+        attachScoreDisplay("score_drivein");
+        
         surveyForm.addEventListener("submit", (event) => {
             event.preventDefault(); // 기본 제출(새로고침) 막기
 
